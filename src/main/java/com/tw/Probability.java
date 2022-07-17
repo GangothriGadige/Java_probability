@@ -13,6 +13,9 @@ public class Probability {
         return probabilityOfEventA.value * probabilityOfEventB.value;
     }
 
+    public static double probabilityOfAnEventNotHappening(Probability probabilityOfAnEvent) {
+        return 1 - probabilityOfAnEvent.value;
+    }
 
     @Override
     public boolean equals(Object object) {
