@@ -9,6 +9,11 @@ public class Probability {
         this.value = probabilityOfAnEvent;
     }
 
+    public static double probabilityOfTwoEventsOccuringTogether(Probability probabilityOfEventA, Probability probabilityOfEventB) {
+        return probabilityOfEventA.value * probabilityOfEventB.value;
+    }
+
+
     @Override
     public boolean equals(Object object) {
         if (this == object) return true;
