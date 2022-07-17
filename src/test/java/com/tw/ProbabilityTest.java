@@ -31,5 +31,14 @@ public class ProbabilityTest {
 
         assertThat(Probability.probabilityOfAnEventNotHappening(sureEvent), is(equalTo(expectedProbability.value)));
     }
+    @Test
+    void shouldReturnProbabilityOfEitherTwoEventsOccuring() {
+        Probability impossibleEvent = new Probability(0);
+        Probability sureEvent = new Probability(1);
+        Probability expectedProbability = new Probability(1);
+
+        assertThat(Probability.probabilityOfEitherTwoEventsOccuring(impossibleEvent, sureEvent), is(equalTo(expectedProbability.value)));
+    }
+
 
 }
